@@ -117,8 +117,8 @@
     background-image: url('./Survey.jpg');
     background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
   background-size: auto;
-    
+  height: 600px;
+
 
 }

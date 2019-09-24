@@ -22,10 +22,6 @@ export default class Profile extends Component {
                 <input type="text" id="inputAge" className="form-control" placeholder="Age" ></input>
 
                 <br />
-                <label  className="sr-only">Email address</label>
-                <input type="text" id="inputEmail" className="form-control" placeholder="Email address" name="email"></input>
-
-                <br />
                 <label className="sr-only">State</label>
                 <input type="text" id="inputAddress" className="form-control" placeholder="Address" name="address"></input>
 

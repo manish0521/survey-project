@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from "react-router-dom";
 import  SignUp from "./SignUp";
 import  SignIn from "./SignIn";
 
@@ -19,15 +19,13 @@ class Survey extends Component {
 
       this.state = {
           user : '',
-          Username: '',
           email: '',
 
           answers: {
               answer1: '',
               answer2: '',
-              answer3: '',
-              answer4: '',
-              answer5: ''
+              answer3: ''
+              
           },
           isLoggedIn: false,
           isSubmitted: false
@@ -41,6 +39,12 @@ class Survey extends Component {
     handleSurveySubmit(e) {
       
         e.preventDefault();
+
+        this.setState({
+            isSubmitted: true
+        }, () => {
+            console.log(this.state.isSubmitted)
+        })
     }
 
     answerSelected(e) {
@@ -77,9 +81,10 @@ class Survey extends Component {
 
       if(this.context.isAuth === false) {
           currentDisplay = <SignUp logUser={this.logUser} changeUsername={this.changeUsername}/>
-      } else if(this.context.isAuth  === true ) {
+      } else if(this.context.isAuth  === true && this.state.isSubmitted === false) {
           currentDisplay = <form onSubmit={this.handleSurveySubmit}>
-             <div className="card">
+             <div className='survey-background'>
+             <div className="card ">
                  <h3 className="survey-title">Personnel Survey</h3>
                  <div className="survey-question">
                      <h3>Gender</h3>
@@ -126,13 +131,15 @@ class Survey extends Component {
                          <input type="radio" className="radio" name="answer5" value="Student" onClick={this.answerSelected} /> Student
                     </label>
                  </div>
-                 <input className="submitButton" type="submit"  value="submit"/>
+                 <button className="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+             </div>
              </div>
         </form>
 
      } else if (this.state.isSubmitted === true) {
         currentDisplay = <div>
-            <h2>Thanks for taking this survey, {this.state.Username}</h2>
+            <h2>Thanks for taking this survey! </h2>
+            <Link> Click me for for the results!</Link>
         </div>
      }
 

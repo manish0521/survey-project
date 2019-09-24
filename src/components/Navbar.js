@@ -26,8 +26,8 @@ export default class Navbar extends Component {
           <li className="nav-item">
           { !isAuth ? <NavLink exact to='/sign-in' className="nav-link" activeClassName="selected">Sign in</NavLink>: <NavLink exact to='/' onClick={() => logout()} className="nav-link">Logout</NavLink>}
 
-            
           </li>
+          
         </ul>
       </nav>
 
