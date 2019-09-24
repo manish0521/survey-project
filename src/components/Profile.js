@@ -26,9 +26,9 @@ export default class Profile extends Component {
                 <input type="text" id="inputAddress" className="form-control" placeholder="Address" name="address"></input>
 
                 <br />
-                <label className="sr-only">Password</label>
                 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Update Profile</button>
+                
+                
 
             </form>
 

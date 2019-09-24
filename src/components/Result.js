@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import Survey from './Survey'
 
-export default class Profile extends Component {
+export default class Result extends Component {
     
   render() {
     return (

@@ -7,6 +7,7 @@ import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import NotFound from './components/NotFound';
 import Profile from './components/Profile';
+import Result from './components/Result';
 import PrivateRoute from './components/PrivateRoute';
 
 import Context from './Context/Context';
@@ -108,10 +109,11 @@ export default class App extends Component {
                 <Route exact path='/' render={(props) => <Home {...props}  />} />
                 <Route path='/sign-up' render={(props) => <SignUp  {...props} />} />
                 <Route path='/sign-in' render={(props) => <SignIn {...props}  />} />
-
+                <Route path='/results' render={(props) => <PrivateRoute {...props} {...this.state} component={Result}  />}/>
                 <Switch>
                   <Route path='/profile' render={(props) => <PrivateRoute {...props} {...this.state} component={Profile}  />} />
                 </Switch>
+                
                 
                 <Route component={NotFound} />
               </Switch>

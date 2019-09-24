@@ -137,9 +137,9 @@ class Survey extends Component {
         </form>
 
      } else if (this.state.isSubmitted === true) {
-        currentDisplay = <div>
+        currentDisplay = <div className='thankyou'>
             <h2>Thanks for taking this survey! </h2>
-            <Link> Click me for for the results!</Link>
+            <Link to='/results'> Click me for for the results!</Link>
         </div>
      }
 

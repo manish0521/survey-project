@@ -12,7 +12,7 @@ export default class Navbar extends Component {
 
     return (
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark">
 
         <NavLink exact to='/' className="nav-link" activeClassName="selected" >Home</NavLink>
         
