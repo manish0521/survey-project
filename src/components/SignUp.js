@@ -34,6 +34,14 @@ export default class SignUp extends Component {
       <div className='text-center'>
       <form className="form-signin" onSubmit={this.handleSubmit}>
         <h1 className="h3 mb-3 font-weight-normal">Please Sign Up</h1>
+
+        <label htmlFor="inputEmail" className="sr-only">First Name</label>
+        <input className="form-control" type="text" placeholder="First Name" autoFocus={true} ref="name" 
+                name="FirstName"/>
+       <label htmlFor="inputEmail" className="sr-only">Last Name</label>
+        <input className="form-control" type="text" placeholder="Last Name" autoFocus={true} ref="name"
+                name="LastName"/>
+
         <label htmlFor="inputEmail" className="sr-only">Email address</label>
         <input type="text" id="inputEmail" className="form-control" placeholder="Email address" name='email' onChange={this.handleSignIn} required autoFocus />
         <label htmlFor="inputPassword" className="sr-only">Password</label>

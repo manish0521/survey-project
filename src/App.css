@@ -38,17 +38,49 @@
   }
 }
 
-card {
+.check-container {
+    display: block;
+    position: relative;
+    background-color: #ccc;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.check-container:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+.check-container:hover  {
+    background-color: #d087ed;
+}
+
+.check-container.label-checked {
+    background-color:rgb(126, 26, 226);
+}
+
+.card {
     max-width: 400px;
     height: 100vh;
     padding: 20px 20px 20px 20px;
     position: relative;
-    background-color: #fff;
+    background-color: rgb(153, 17, 17);
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     margin: 20px auto;
     opacity: 1;
-    color: #000;
+    color: rgb(225, 226, 238);
     line-height: 49px;
     overflow-y: auto;
   }
@@ -63,6 +95,7 @@ card {
 
 .survey-title {
     font-size: 25px;
+    color: rgb(96, 96, 228);
     font-weight: bold;
     text-transform: uppercase;
     margin-top: -10px;
@@ -76,6 +109,16 @@ card {
     width: 100%;
     height: 1px;
     margin-top: 15px;
-    background: rgba(153, 150, 153, 0.89);
+    background: rgba(228, 186, 228, 0.89);
 }
 
+.survey-background{
+    position: center;
+    background-image: url('./Survey.jpg');
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-size: auto;
+    
+
+}
