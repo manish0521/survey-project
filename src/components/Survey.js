@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import  SignUp from "./SignUp";
 import  SignIn from "./SignIn";
-
+import buttonImage from '../submit.jpg'
 
 import "../App.css";
 
@@ -131,7 +131,9 @@ class Survey extends Component {
                          <input type="radio" className="radio" name="answer5" value="Student" onClick={this.answerSelected} /> Student
                     </label>
                  </div>
-                 <button className="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                 <button  className="btn btn-sm alert" type="submit" ><img src={buttonImage} width="100vh" height="60vh"></img></button>
+                
+
              </div>
              </div>
         </form>

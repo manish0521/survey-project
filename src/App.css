@@ -125,5 +125,17 @@
 }
 
 .thankyou{
+    max-width: 400px;
     
+    height: 50vh;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    background-color: rgb(153, 17, 17);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    opacity: 1;
+    color: rgb(225, 226, 238);
+    line-height: 49px;
+    overflow-y: auto;
 }
