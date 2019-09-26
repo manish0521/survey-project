@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Axis  from "./Axis";
+import Test from "./Test";
 // import Survey from './Survey'
 
 export default class Result extends Component {
@@ -9,6 +11,10 @@ export default class Result extends Component {
         <div className="results">
             
             Hello
+
+            
+            <Test />
+
         </div>
     )
   }

@@ -1,0 +1,52 @@
+.lineChart {
+    width: 50%;
+    float: left;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .barChart {
+    width: 50%;
+    float: left;
+    background: rgba(255, 240, 86, 0.9);
+  }
+  
+  .lineChart .axisLeft line {
+    stroke-width: 0.5;
+    stroke: rgba(255, 255, 255, 0.2);
+  }
+  .lineChart .axisLeft path {
+    display: none;
+  }
+  .lineChart .axisBottom line, .lineChart .axisBottom path {
+    display: none;
+  }
+  .lineChart text {
+    fill: white;
+  }
+  
+  .barChart .axisLeft line {
+    stroke-width: 0.5;
+    stroke: rgba(0, 0, 0, 0.5);
+  }
+  .barChart .axisLeft path {
+    display: none;
+  }
+  .barChart .axisBottom line, .barChart .axisBottom path {
+    display: none;
+  }
+  .barChart text {
+    fill: black;
+  }
+  
+  .area {
+    fill: url(#area-gradient);
+  }
+  
+  .rectOverlayBarChart {
+    fill: rgba(0, 0, 0, 0.1);
+  }
+  
+  .rectOverlayLineChart {
+    fill: rgba(255, 255, 255, 0.1);
+  }
+  

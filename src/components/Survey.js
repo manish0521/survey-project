@@ -142,6 +142,7 @@ class Survey extends Component {
         currentDisplay = <div className='thankyou'>
             <h2>Thanks for taking this survey! </h2>
             <Link to='/results'> Click me for for the results!</Link>
+            
         </div>
      }
 

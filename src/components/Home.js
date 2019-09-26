@@ -8,6 +8,7 @@ export default class Home extends Component {
   static contextType = Context;
 
   componentDidMount(){
+
       console.log(queryString.parse(this.props.location.search))
   }
 

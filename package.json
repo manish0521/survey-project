@@ -15,6 +15,7 @@
     "prop-types": "^15.7.2",
     "query-string": "^6.8.3",
     "react": "^16.9.0",
+    "react-chartjs-2": "^2.8.0",
     "react-custom-share": "^0.4.8",
     "react-d3-library": "^1.1.8",
     "react-dom": "^16.9.0",
