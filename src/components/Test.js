@@ -6,10 +6,15 @@ export default class PieChart extends Component{
 	constructor(props) {
         super(props)
         this.state = {
-            labels: ['male', 'female'],
-            datasets: [{
+            labels1: ['male', 'female'],
+            labels2: ['HS', 'College'],
+            datasets1: [{
                 data: [2000, 4000],
-                backgroundColor: ['red', 'blue']
+                backgroundColor: ['pink', 'blue']
+            }],
+            datasets2: [{
+                data: [1000, 4000],
+                backgroundColor: ['black', 'white']
             }]
         }
 	}
@@ -22,12 +27,22 @@ export default class PieChart extends Component{
 
                 <Pie 
                     data={{
-                        labels: this.state.labels,
-                        datasets: this.state.datasets,
+                        labels1: this.state.labels1,
+                        datasets: this.state.datasets1,
+                        
                         }}
                     height='50%'
                 />
                 <br />
+                <h1> Education</h1>
+                <Pie 
+                    data={{
+                        
+                        labels2: this.state.labels2,
+                        dataset2: this.state.datasets2,
+                        }}
+                    height='75%'
+                />
             
             </div>
         )

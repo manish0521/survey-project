@@ -67,6 +67,12 @@ class Survey extends Component {
         console.log(this.state);
     }
 
+    handleOptionChange = (changeEvent) => {
+        this.setState({
+          answerSelected: changeEvent.target.value
+        });
+      }
+
    
 
     logUser = (user, Username, email) => {
@@ -89,46 +95,44 @@ class Survey extends Component {
                  <div className="survey-question">
                      <h3>Gender</h3>
                      <label className="check-container">
-                         <input type="radio" name="answer1" value="M" onClick={this.answerSelected} /> Male
+                         <input type="radio" name="answer1" value="M" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Male
                      </label>
                      <label className="check-container">
-                         <input type="radio" name="answer1" value="F" onClick={this.answerSelected} /> Female
+                         <input type="radio" name="answer1" value="F" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Female
                      </label>
                  </div>
                  
                  <div className="survey-question">
                      <h3>Highest Level of Education</h3>
                      <label className="check-container">
-                         <input type="radio" name="answer3" value="High School" onClick={this.answerSelected} /> High School
+                         <input type="radio" name="answer2" value="High School" onClick={this.answerSelected} onChange={this.handleOptionChange} /> High School
                     </label>
                     <label className="check-container">
-                         <input type="radio" name="answer3" value="Associate Degree" onClick={this.answerSelected} /> Associate 
+                         <input type="radio" name="answer2" value="Associate Degree" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Associate 
                     </label>
                      <label className="check-container">
-                         <input type="radio" name="answer3" value="College Degree(Bsc)" onClick={this.answerSelected} /> Undergraduate
+                         <input type="radio" name="answer2" value="College Degree(Bsc)" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Undergraduate
                     </label>
                      <label className="check-container">
-                         <input type="radio" name="answer3" value="Masters" onClick={this.answerSelected} /> Graduate
+                         <input type="radio" name="answer2" value="Masters" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Graduate
                     </label>
                     
                      <label className="check-container">
-                         <input type="radio" name="answer3" value="Masters" onClick={this.answerSelected} /> Post-Graduate
+                         <input type="radio" name="answer2" value="Masters" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Post-Graduate
                     </label>
                  </div>
                  
                  <div className="survey-question">
                      <h3>Job status</h3>
                      <label className="check-container">
-                         <input type="radio" name="answer5" value="Employed" onClick={this.answerSelected} /> Employed
+                         <input type="radio" name="answer3" value="Employed" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Employed
                     </label>
                     <label className="check-container">
-                         <input type="radio" name="answer5" value="Unemployed" onClick={this.answerSelected} /> Unemployed
+                         <input type="radio" name="answer3" value="Unemployed" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Unemployed
                     </label>
+                    
                     <label className="check-container">
-                         <input type="radio" className="radio" name="answer5" value="Looking for job" onClick={this.answerSelected} /> Looking for job
-                    </label>
-                    <label className="check-container">
-                         <input type="radio" className="radio" name="answer5" value="Student" onClick={this.answerSelected} /> Student
+                         <input type="radio" type="radio" name="answer3" value="Student" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Student
                     </label>
                  </div>
                  <button  className="btn btn-sm alert" type="submit" ><img src={buttonImage} width="100vh" height="60vh"></img></button>
@@ -142,7 +146,7 @@ class Survey extends Component {
         currentDisplay = <div className='thankyou'>
             <h2>Thanks for taking this survey! </h2>
             <Link to='/results'> Click me for for the results!</Link>
-            
+
         </div>
      }
 
