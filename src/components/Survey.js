@@ -20,11 +20,14 @@ class Survey extends Component {
       this.state = {
           user : '',
           email: '',
+          firstname: '',
+          lastname: '',
+
 
           answers: {
-              answer1: '',
-              answer2: '',
-              answer3: ''
+              gender: '',
+              education: '',
+              status: ''
               
           },
           isLoggedIn: false,
@@ -80,6 +83,8 @@ class Survey extends Component {
         console.log(user, Username, email);
     }
 
+    
+
   render(){
       let currentDisplay = '';
         
@@ -95,44 +100,44 @@ class Survey extends Component {
                  <div className="survey-question">
                      <h3>Gender</h3>
                      <label className="check-container">
-                         <input type="radio" name="answer1" value="M" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Male
+                         <input type="radio" name="gender" value="M" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Male
                      </label>
                      <label className="check-container">
-                         <input type="radio" name="answer1" value="F" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Female
+                         <input type="radio" name="gender" value="F" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Female
                      </label>
                  </div>
                  
                  <div className="survey-question">
                      <h3>Highest Level of Education</h3>
                      <label className="check-container">
-                         <input type="radio" name="answer2" value="High School" onClick={this.answerSelected} onChange={this.handleOptionChange} /> High School
+                         <input type="radio" name="education" value="High School" onClick={this.answerSelected} onChange={this.handleOptionChange} /> High School
                     </label>
                     <label className="check-container">
-                         <input type="radio" name="answer2" value="Associate Degree" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Associate 
+                         <input type="radio" name="education" value="Associate Degree" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Associate 
                     </label>
                      <label className="check-container">
-                         <input type="radio" name="answer2" value="College Degree(Bsc)" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Undergraduate
+                         <input type="radio" name="education" value="Undergraduate" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Undergraduate
                     </label>
                      <label className="check-container">
-                         <input type="radio" name="answer2" value="Masters" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Graduate
+                         <input type="radio" name="education" value="Masters" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Graduate
                     </label>
                     
                      <label className="check-container">
-                         <input type="radio" name="answer2" value="Masters" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Post-Graduate
+                         <input type="radio" name="education" value="Post-Graduate" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Post-Graduate
                     </label>
                  </div>
                  
                  <div className="survey-question">
                      <h3>Job status</h3>
                      <label className="check-container">
-                         <input type="radio" name="answer3" value="Employed" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Employed
+                         <input type="radio" name="status" value="Employed" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Employed
                     </label>
                     <label className="check-container">
-                         <input type="radio" name="answer3" value="Unemployed" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Unemployed
+                         <input type="radio" name="status" value="Unemployed" onClick={this.answerSelected} onChange={this.handleOptionChange} /> Unemployed
                     </label>
                     
                     <label className="check-container">
-                         <input type="radio" type="radio" name="answer3" value="Student" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Student
+                         <input type="radio" name="status" value="Student" onClick={this.answerSelected} onChange={this.handleOptionChange}/> Student
                     </label>
                  </div>
                  <button  className="btn btn-sm alert" type="submit" ><img src={buttonImage} width="100vh" height="60vh"></img></button>
@@ -159,6 +164,8 @@ class Survey extends Component {
 }
 
 // TODO: validate survey entry before submission
+
+
 
 
 export default Survey;

@@ -43,7 +43,7 @@
 .check-container {
     display: block;
     position: relative;
-    background-color: #ccc;
+    background-color: rgb(204, 204, 204);
     cursor: pointer;
     font-size: 20px;
     -webkit-user-select: none;
